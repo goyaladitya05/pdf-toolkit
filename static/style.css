@@ -1,0 +1,106 @@
+:root {
+  --bg: #0f1115;
+  --card: #181b22;
+  --border: #2a2f3a;
+  --text: #e6e8ec;
+  --muted: #9aa1ad;
+  --accent: #4f8cff;
+  --accent-hover: #3f78e0;
+  --error: #ff6b6b;
+  --success: #4ade80;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  padding: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+h1 { margin: 0 0 .25rem; font-size: 1.6rem; }
+.subtitle { margin: 0 0 1.5rem; color: var(--muted); font-size: .9rem; }
+
+.tabs {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1.25rem;
+  background: var(--bg);
+  padding: .3rem;
+  border-radius: 10px;
+}
+.tab {
+  flex: 1;
+  padding: .6rem;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font-size: .95rem;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.tab.active { background: var(--card); color: var(--text); }
+
+form { display: flex; flex-direction: column; gap: 1rem; }
+
+.drop {
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  padding: 1rem;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  color: var(--muted);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+}
+.drop:hover, .drop.dragover { border-color: var(--accent); color: var(--text); }
+.drop.has-file { border-style: solid; border-color: var(--accent); color: var(--text); }
+
+input[type="password"] {
+  padding: .75rem;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+input[type="password"]:focus { outline: none; border-color: var(--accent); }
+
+#submit {
+  padding: .8rem;
+  border: none;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s;
+}
+#submit:hover { background: var(--accent-hover); }
+#submit:disabled { opacity: .6; cursor: not-allowed; }
+
+.status {
+  margin: 1rem 0 0;
+  font-size: .9rem;
+  text-align: center;
+}
+.status.error { color: var(--error); }
+.status.success { color: var(--success); }

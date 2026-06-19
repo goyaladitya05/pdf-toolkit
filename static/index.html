@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Toolkit</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>PDF Toolkit</h1>
+    <p class="subtitle">Encrypt or decrypt PDFs locally. Files never leave your machine.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-mode="encrypt">Encrypt</button>
+      <button class="tab" data-mode="decrypt">Decrypt</button>
+    </div>
+
+    <form id="form">
+      <label id="drop" class="drop" for="file">
+        <input type="file" id="file" accept="application/pdf,.pdf" hidden />
+        <span id="drop-text">Drop a PDF here or click to choose</span>
+      </label>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        autocomplete="off"
+        required
+      />
+
+      <button type="submit" id="submit">Encrypt PDF</button>
+    </form>
+
+    <p id="status" class="status" hidden></p>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
