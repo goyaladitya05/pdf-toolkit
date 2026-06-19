@@ -1,7 +1,5 @@
 # PDF Toolkit
 
-## Why I built this
-
 I don't trust handing my PDFs to online tools. 
 
 So this does it **entirely on your own machine**. Nothing is uploaded anywhere.
