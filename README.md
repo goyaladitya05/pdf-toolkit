@@ -21,7 +21,7 @@ cd backend
 python run.py
 ```
 
-Open <http://127.0.0.1:8000>, drop in a PDF, enter a password, and download the
+Open <http://127.0.0.1:8080>, drop in a PDF, enter a password, and download the
 result.
 
 ## License
